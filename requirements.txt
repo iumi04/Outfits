@@ -1,0 +1,32 @@
+# Core Dependencies
+Flask==2.3.2
+Flask-Cors==3.0.10
+python-dotenv==1.0.0
+gunicorn==20.1.0
+
+# Machine Learning and Vision Models
+torch==2.0.1
+torchvision==0.15.2
+transformers==4.31.0
+numpy==1.24.3
+scikit-learn==1.2.2
+
+# Image and Data Processing
+Pillow==9.5.0
+opencv-python==4.8.0.76
+pandas==2.0.3
+
+# Frontend Interaction
+requests==2.31.0
+
+# Developer Utilities
+tqdm==4.65.0
+matplotlib==3.7.2
+
+# OPTIONAL: Database (Production-Level Only)
+# Uncomment the following if you plan to use a SQL-based database
+# psycopg2-binary==2.9.6
+
+# OPTIONAL: SQLite or Database Support for Local Development
+# Uncomment the following if working with SQLite locally
+# SQLAlchemy==2.0.11
