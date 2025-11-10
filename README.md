@@ -1,7 +1,7 @@
 # **FashionFit AI: Outfit Recommendation System**
 
 **Version:** Proof of Concept (POC)  
-**Last Updated:** [Insert Date]  
+**Last Updated:** [11/11/2025]  
 
 ---
 
