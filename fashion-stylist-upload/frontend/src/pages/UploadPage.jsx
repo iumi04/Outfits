@@ -11,7 +11,7 @@ import {
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import { motion } from "framer-motion";
 
-export default function UploadPage({ onUpload }) {
+export default function UploadPage({ onUpload, goToWardrobe }) {
   const fileInputRef = useRef();
   const [previewUrl, setPreviewUrl] = useState(null);
   const [context, setContext] = useState("");

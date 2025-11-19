@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import UploadPage from "./pages/UploadPage";
 import LoadingPage from "./pages/LoadingPage";
 import ResultsPage from "./pages/ResultsPage";
+import MyWardrobePage from "./pages/MyWardrobePage";
+
 
 import "./App.css";  // Import your stylesheet
 
@@ -51,7 +53,9 @@ function App() {
       <div className="backgroundOverlay" />
 
       <div className="fadeIn" style={{ position: "relative", zIndex: 1, width: "100%", maxWidth: 700 }}>
-        {page === "upload" && <UploadPage onUpload={handleUpload} />}
+        {page === "upload" && (
+          <UploadPage onUpload={handleUpload} goToWardrobe={() => setPage("wardrobe")} />
+        )}
         {page === "loading" && <LoadingPage />}
         {page === "results" && <ResultsPage results={results} onBack={goBack} />}
       </div>
