@@ -3,6 +3,8 @@ import UploadPage from "./pages/UploadPage";
 import LoadingPage from "./pages/LoadingPage";
 import ResultsPage from "./pages/ResultsPage";
 
+import "./App.css";  // Import your stylesheet
+
 function App() {
   const [page, setPage] = useState("upload");
   const [imageFile, setImageFile] = useState(null);
@@ -26,13 +28,15 @@ function App() {
             name: "White Sneakers",
             style: "Clean minimalist",
             description: "Perfect contrast for darker tops.",
-            image: "https://images.unsplash.com/photo-1528701800489-20be9f63f14a",
+            image:
+              "https://images.unsplash.com/photo-1528701800489-20be9f63f14a",
           },
           {
             name: "Oversized Hoodie",
             style: "Cozy streetwear",
             description: "Neutral tone matches bold bottoms.",
-            image: "https://images.unsplash.com/photo-1600185365483-26d7a4f7e2a1",
+            image:
+              "https://images.unsplash.com/photo-1600185365483-26d7a4f7e2a1",
           },
         ],
       };
@@ -43,13 +47,15 @@ function App() {
   };
 
   return (
-    <>
-      {page === "upload" && <UploadPage onUpload={handleUpload} />}
-      {page === "loading" && <LoadingPage />}
-      {page === "results" && (
-        <ResultsPage results={results} onBack={goBack} />
-      )}
-    </>
+    <div className="App-dark">
+      <div className="backgroundOverlay" />
+
+      <div className="fadeIn" style={{ position: "relative", zIndex: 1, width: "100%", maxWidth: 700 }}>
+        {page === "upload" && <UploadPage onUpload={handleUpload} />}
+        {page === "loading" && <LoadingPage />}
+        {page === "results" && <ResultsPage results={results} onBack={goBack} />}
+      </div>
+    </div>
   );
 }
 
